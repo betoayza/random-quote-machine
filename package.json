@@ -1,0 +1,14 @@
+{
+  "name": "random-quote-machine",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/betoayza/random-quote-machine.git",
+  "author": "Alberto <aaayza@gmail.com>",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "http-server": "^14.1.0"
+  }
+}
