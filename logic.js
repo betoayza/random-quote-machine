@@ -6586,11 +6586,13 @@ $(document).ready(function () {
     $("#text").html(quote.text);
     $("#author").html(quote.author);
   });
-  $("#tweet-quote").click(function () {
-      let text=quote.text;
-      let author=quote.author;
-    const path = "twitter.com/intent/tweet";
-    $("#tweet-quote").append(path,text,author);
-  });
+  let text = quote.text;
+  let author = quote.author;
+  let hashtag= "#quote"
+  const path = 'https://twitter.com/intent/tweet?hashtags=quotes&text="'+text+'" '+author;
+  $("#tweet-quote").attr("href",path);
+  
+
+ 
   //$("#new-quote").hide();
 });
