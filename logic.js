@@ -6578,18 +6578,19 @@ $(document).ready(function () {
     return quotes[Math.floor(Math.random() * quotes.length)];
   }
   let quote = findQuote();
-  console.log(quote);
-  $("#text").append(quote.text);
-  $("#author").append(quote.author);
+  console.log(quote);  
+  let text = '"'+quote.text+'"';
+  let author = " -"+quote.author;
+  $("#text").append(text);
+  $("#author").append(author);
   $("#new-quote").click(function () {
     quote = findQuote();
-    $("#text").html(quote.text);
-    $("#author").html(quote.author);
-  });
-  let text = quote.text;
-  let author = quote.author;
-  let hashtag= "#quote"
-  const path = 'https://twitter.com/intent/tweet?hashtags=quotes&text="'+text+'" '+author;
+    text = '"'+quote.text+'"';
+    author = " -"+quote.author;
+    $("#text").html(text);
+    $("#author").html(author);
+  });  
+  const path = "https://twitter.com/intent/tweet?hashtags=quotes&text="+text+author;
   $("#tweet-quote").attr("href",path);
   
 
